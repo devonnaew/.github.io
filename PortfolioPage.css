@@ -1,0 +1,243 @@
+/* Contents
+ 1.Color Variables
+ 2.Global Styling
+ 3.Typography & Icons
+ 4.Layout Styling (Images included in their respective part of layout)
+    4.1 Navigation
+    4.2 Welcome Section
+    4.3 Objectives
+    4.4 Projects
+    4.5 Footer
+ 5.Media Query Styling 
+*/
+
+
+
+
+/* 1.Color Variables & Font Size*/
+:root{
+    --green: #c5c7b2;
+    --gold: #d5ac32;
+    --light-green:#f2f4e4;
+    --light-gold:#EDDCA8;
+    --dark-gold:#ad8800;
+    --dark-green: #999d82;
+    --white: #fff7e7;
+    --black: #181010;
+    --fs1:1.25rem;
+    --fs2:1.4rem;
+    --fs3:1.6rem;
+    --fs4:1.8rem;
+    --fs5:2.5rem;
+}
+
+/* 2.Global Styling */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;  
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    font-size: var(--fs1);
+    color: var(--black);
+    line-height: 1.4;
+    text-align: center;
+}
+
+/* 3.Typography */
+h1, h2, h3, h4, h5{
+    font-family: "Spartan", sans-serif;
+    
+}
+
+h1{
+    font-size: var(--fs5);
+    font-weight: 600;
+    padding-bottom: 1%;
+}
+
+h2{
+    font-size: var(--fs4);
+    font-weight: 500;
+    padding-top: 3%;
+}
+
+h3{
+    font-size: var(--fs3);
+    font-weight: 300;
+    padding-top: 2%;
+}
+
+h4{
+    font-size: var(--fs2);
+}
+
+
+p{
+    text-indent: var(--fs1);
+    padding-left:1%;
+    padding-right: 1%;
+}
+
+a{
+    text-decoration: none;
+    color: var(--black);
+}
+
+a:hover{
+    text-decoration: underline;
+    text-decoration-color: var(--dark-gold);
+    text-decoration-thickness: 3px; 
+}
+
+i{
+    font-size: 3em;
+    color:var(--dark-gold);
+    padding: 2%;
+}
+
+i:hover{
+    color: var(--light-gold);
+}
+
+mark{
+    line-height: 1.6rem;
+    background-color: var(--light-gold);
+    text-align: center;
+}
+
+em{
+    font-size: 1.3rem;
+}
+
+/* 4.Layout Styling */
+
+/* 4.1 Navigation*/
+/* Still need to restyle with media query (make new query for less than 700px wide) */
+nav{
+    position:fixed;
+    display: inline-flex;
+    height:10%;
+    width:100%;
+    top: 0;
+    left: 0;
+    background-color: var(--green);
+    z-index: 1;
+}
+
+nav ul{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+nav li{
+    padding-left:10%;
+    padding-right: 2%;
+   
+}
+
+nav img{
+    width:20%;
+}
+
+/* 4.2 Welcome Section*/
+
+.welcome-section {
+    display: grid;
+    padding-top:10%;
+    height: 100vh;
+    font-size: var(--fs1);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "h1 h1"
+    "img p";
+}
+
+.welcome-section-h1{
+    grid-area:h1;
+}
+
+.welcome-section-img{
+    grid-area: img;
+    justify-items: center;
+    padding-left: 10%;
+    height:70vh;
+    width: auto;
+}
+
+.welcome-section-p{
+    grid-area: p;
+    display:grid;
+    padding-right: 10%;
+    font-size: var(--fs2);
+    align-items: center;
+    text-align: left;
+    text-indent: 0;
+}
+
+
+/* 4.3 Objectives */
+.objectives{
+    background-color: var(--dark-green);
+}
+
+.objectives img{
+    height: 80vh;
+}
+
+/* 4.4 Projects */
+.project-tile{
+    display:grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: .5fr 2fr .5fr;
+    grid-template-areas:
+        "h      h     h" 
+        "larrow img  rarrow"
+        "a      a    a";
+    align-items: center;
+    justify-items: center;
+}
+
+.project-h{
+    grid-area: h;
+}
+
+.ileft{
+    grid-area: larrow;
+  
+}
+
+.iright{
+    grid-area: rarrow;
+ 
+}
+
+.project-img{
+    grid-area: img;
+    display: grid;
+    height:auto;
+    width: auto;
+}
+
+.project-a{
+    grid-area: a;
+}
+
+
+/* 4.5 Footer */
+footer{
+    background-color: var(--light-green);
+}
+
+/* 5. Media Query Styling */
+
+/*max height?*/
+@media (max-width:800px){
+   
+}
