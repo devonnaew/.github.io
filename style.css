@@ -240,11 +240,6 @@ footer{
 /* 5. Media Query Styling */
 
 @media (max-width:800px){
-    --fs1:1.45rem;
-    --fs2:1.6rem;
-    --fs3:1.8rem;
-    --fs4:2rem;
-    --fs5:3rem;
    
     body{
        line-height: 1.6em;
